@@ -11,10 +11,11 @@ with open("./input.txt", "r") as file:
     for line in lines:
 
         lhalf = line[: len(line) // 2]
-
         rhalf = line[len(line) // 2 :]
+
         for item in lhalf:
             if item in rhalf:
                 prioritysum += priority_scale.index(item) + 1
+                break
 
     print(prioritysum)
